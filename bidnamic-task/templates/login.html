@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+
+	<title>Login Form</title>
+</head>
+<body>
+
+	<div class="login split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>The Platform for advertising</h1>
+                <p>Create, manage & collaborate on your ads.</p>
+            </section>
+        </div>
+        <div class="right">
+            <form action="{% url 'index' %}">
+                <input type="hidden" name="value" value="nike">
+                <section class="copy">
+                    <h2>Sign Up</h2>
+                    <div class="login-container">
+                        <p>Dont have an account? <a href="{% url 'index' %}">
+                        <strong>Free pass</strong></a></p>
+                    </div>
+                </section>
+                <div class="input-container name">
+                    <label for="fname">Full Name</label>
+                    <input id="fname" type="text">
+                </div>
+                <div class="input-container email">
+                    <label for="email">Email</label>
+                    <input id="email" type="email">
+                </div>
+                <div class="input-container password">
+                    <label for="password">Password</label>
+                    <input 
+                        id="password" 
+                        type="password"
+                        placeholder="Must be at least 6 characters"
+                    >
+                    <i class="far fa-eye-slash"></i>
+                </div>
+                <div class="input-container cta">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Sign up for email updates.
+                    </label>
+                </div>
+                <button class="signup-btn" type="submit">Sign Up</button>
+                <section class="copy legal">
+                    <p><span class="small">
+                        This is a Sample Page, just hit the Sign up button
+                        <br> <a href="#">Privacy Policy</a> &amp; <a href="#">Terms of Service</a>.
+                    </span></p>
+                </section>
+            </form>
+        </div>
+    </div>
+	
+</body>
+</html>

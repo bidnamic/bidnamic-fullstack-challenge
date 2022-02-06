@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+
+	<title>Search Terms</title>
+</head>
+<body>
+
+	<div class="container">
+		<header class="header">
+			<a href="{% url 'index' %}">
+				<img class="bid-logo" src="{% static 'logo.png' %}" alt="logo" />
+			</a>
+			<nav>
+				<a href="{% url 'login' %}" class="nav__link">
+					<span class="nav__link--text" data-splitting>Login</span>
+					<span class="nav__link--text" data-splitting>Login</span>
+				</a>
+			</nav>
+		</header>
+		<section class="contacts-library">
+			<ul class="contacts-list">
+				{% for searchValue in structureValues %}
+				<a href="contact-profile.html">
+					<div class="contact-section">
+						<li class="list__item description">
+							<p class="contact-name">{{ searchValue.campaign.structure_value | title }}
+								<span class="alias"> {{ searchValue.ad_group.alias | title }} </span>
+							</p>
+							<p class="relationship">
+								<span class="roas">ROAS</span>
+								{{ searchValue.roas }}
+							</p>
+						</li>
+						<li class="list__item info">
+							<i class="fas fa-hand-holding-usd"></i>
+							<i class="fas fa-mouse text"></i>
+							<p class="price">{{ searchValue.cost }}</p>
+							<p class="clicks">{{ searchValue.clicks }}</p>
+						</li>
+					</div>
+				</a>
+				<hr>
+				{% endfor %}
+			</ul>
+		</section>
+	</div>
+	
+	<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+	<script>
+		Splitting();
+	</script>
+</body>
+</html>
