@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  --link-translate-x: 1rem;
+  --link-translate-x: 0.7rem;
   --primary-blue: #233975;
 }
 body {
