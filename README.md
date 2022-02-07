@@ -24,7 +24,7 @@ git clone https://github.com/AugustineEbiem/bidnamic-fullstack-challenge.git
 Once cloned, you can open the project folder:
 
 ``` 
-cd bidnamic-fullstack-challenge
+cd bidnamic-fullstack-challenge/bidnamic-task
 ```
 
 
