@@ -1,6 +1,6 @@
 # Bidnamic API with HTML Template
 
-<img src="preview.png" alt="drawing" width="500"/>
+<img src="preview.png" alt="drawing"/>
 
 ## Summary
 The Bidnamic API is a RESTful API that retrieves the Top 10 Search Terms by ROAS for a campaign `structure_value`. The HTML template displays the Top 10 Search Terms by ROAS by Nike's `structure_value`
