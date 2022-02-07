@@ -1,14 +1,14 @@
 # Bidnamic API with HTML Template
 
-<img src="screenshot.png" alt="drawing" width="500"/>
+<img src="preview.png" alt="drawing" width="500"/>
 
 ## Summary
-The Bidnamic API is a RESTful API that retrieves the Top 10 Search Terms by ROAS for a campaign `structure_value`. The HTML template consist of a Homepage that displays the Top 10 Search Terms by ROAS by Nike's `structure_value` and a sample Login Page.
-> A valid token is required to access endpoint.
+The Bidnamic API is a RESTful API that retrieves the Top 10 Search Terms by ROAS for a campaign `structure_value`. The HTML template displays the Top 10 Search Terms by ROAS by Nike's `structure_value`
+> A valid token is required to access the endpoint.
 
 ## Requirements
 * Python 3.8 or higher
-* PostGreSQL 10.1 or higher
+* PostgreSQL 10.1 or higher
 
 ## Getting started
 
@@ -35,7 +35,7 @@ To get this project up and running it is advised you create a virtual environmen
 In a terminal (mac/linux) or windows terminal, run the following command
 
 ```
-virtualenv env
+python3 -m venv env
 ```
 
 That will create a new folder `env` in your project directory. Next activate it with this command on mac/linux:
@@ -61,20 +61,20 @@ python manage.py runserver
 
 The API endpoints:
 ```
-http://localhost:8000/structure_value/1578411800/nike/
+http://localhost:8000/api/v1/structure_value/nike/1578411800/
 ```
 ```
-http://localhost:8000/structure_value/1578629887/adidas/
+http://localhost:8000/api/v1/structure_value/adidas/1578629887/
 ```
 ```
-http://localhost:8000/structure_value/1578411797/nike/
+http://localhost:8000/api/v1/structure_value/nike/1578411797/
 ```
 ```
-http://localhost:8000/structure_value/1578630235/puma/
+http://localhost:8000/api/v1/structure_value/puma/1578630235/
 ```
-Test endpoint:
+check server endpoint:
 ```
-http://localhost:8000/api/
+http://localhost:8000/api/v1/checkserver
 ```
 ## Frontend workflow
 Home page:
